@@ -1,0 +1,7 @@
+.DS_Store
+/*.epub
+/*.mobi
+/*.pdf
+/.bundle/config
+/learning-fuzoku-sample-*
+/vendor/bundle
