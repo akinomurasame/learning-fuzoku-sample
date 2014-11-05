@@ -1,10 +1,18 @@
-Fuzoku実践入門 執筆用環境サンプルファイル
-==========================================
+Fuzoku実践入門 環境サンプルファイル
+====================================
+
+[![Fuzoku実践入門](http://f.st-hatena.com/images/fotolife/l/learning-fuzoku/20141105/20141105234306.jpg)](http://www.amazon.co.jp/exec/obidos/ASIN/B00P4X25HO/)
 
 このリポジトリは、Amazonで好評発売中の『[Fuzoku実践入門](http://www.amazon.co.jp/exec/obidos/ASIN/B00P4X25HO/)』の原稿執筆に実際使われた環境ファイルです。
 
 『はじめに』と『第1章』のサンプルも兼ているため、ダウンロードして環境を整えることで、誰でもビルドすることが可能です。
 
+Sample Files
+------------
+
+* [EPUB版](https://github.com/akinomurasame/learning-fuzoku-sample/blob/master/assets/learning-fuzoku-sample.epub?raw=true)
+* [PDF版](https://github.com/akinomurasame/learning-fuzoku-sample/blob/master/assets/learning-fuzoku-sample.pdf?raw=true)
+* [MOBI版](https://github.com/akinomurasame/learning-fuzoku-sample/blob/master/assets/learning-fuzoku-sample.mobi?raw=true)
 
 How to install
 --------------
