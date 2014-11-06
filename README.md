@@ -49,6 +49,13 @@ Requirements
     $ brew install caskroom/cask/brew-cask
     $ brew cask install mactex
 
+Even if you have been completed to the installation of mactex, you need to add the `/usr/texbin` to the PATH environment variable.
+
 ### kindlemail
 
+1. Get OAuth Token
+2. Setup kindlemail
+
 Follow the instructions from https://github.com/djhworld/kindlemail
+
+参考記事: [kidlemailを使ってコマンドラインからKindleへファイルを送る - Fuzoku実践入門ブログ](http://learning-fuzoku.hatenablog.com/entry/2014/11/06/153447)
