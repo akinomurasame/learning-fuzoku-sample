@@ -7,6 +7,8 @@ Fuzoku実践入門 環境サンプルファイル
 
 『はじめに』と『第1章』のサンプルも兼ているため、ダウンロードして環境を整えることで、誰でもビルドすることが可能です。
 
+なお、/src以下のMarkdownファイルは、ゲラ段階のものになっているため、プロジェクトルートにあるReviewファイルと一部内容が異なります。
+
 Sample Files
 ------------
 
@@ -24,7 +26,7 @@ Setup
 
     $ bundle install --path vendor/bundle --binstubs vendor/bundle/bin
 
-How to Build
+How to build
 ------------
 
     $ rake -T
@@ -35,6 +37,10 @@ How to Build
     rake mobi            # create .mobi
     rake pdf             # create .pdf
     rake send_to_kindle  # send to kindle
+
+If you want to build EPUB, Execute this command
+
+    $ rake epub
 
 Requirements
 ------------
