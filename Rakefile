@@ -1,4 +1,13 @@
 require 'rake'
+require 'yaml'
+
+def load_yaml(file)
+  raise "Can't open #{yamlfile}." if file.nil? || !File.exist?(file)
+  return YAML.load_file(file)
+end
+
+config = load_yaml('config.yml')
+bookname = config["bookname"] if bookname.nil?
 
 desc 'create all books (.epub, .pdf, .mobi)'
 task all: [:epub, :pdf, :mobi]
@@ -17,12 +26,12 @@ end
 desc 'create .mobi'
 task :mobi do
   sh 'rm -f *.mobi'
-  sh 'kindlegen learning-fuzoku-sample.epub || true'
+  sh "kindlegen #{bookname}.epub || true"
 end
 
 desc 'send to kindle'
 task :send_to_kindle do
-  sh 'bundle exec kindlemail -f learning-fuzoku-sample.mobi'
+  sh "bundle exec kindlemail -f #{bookname}.mobi"
 end
 
 desc 'convert ./src/*.md to ./*.re'
@@ -35,7 +44,7 @@ end
 
 desc 'clean working files'
 task :clean do
-  sh 'rm -rf learning-fuzoku-sample-*'
+  sh "rm -rf #{bookname}-*"
   sh 'rm -f *.epub'
   sh 'rm -f *.pdf'
   sh 'rm -f *.mobi'
