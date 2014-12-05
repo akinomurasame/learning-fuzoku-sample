@@ -1,4 +1,4 @@
-Fuzoku実践入門 環境サンプルファイル
+Fuzoku実践入門 環境サンプルファイル ![](https://circleci.com/gh/akinomurasame/learning-fuzoku-sample.svg?style=shield&circle-token=07a756aeadf268882074ec8d964fa381468c7c6a)
 ====================================
 
 [![Fuzoku実践入門](http://f.st-hatena.com/images/fotolife/l/learning-fuzoku/20141105/20141105234306.jpg)](http://www.amazon.co.jp/exec/obidos/ASIN/B00P4X25HO/)
