@@ -1,13 +1,9 @@
 require 'rake'
 require 'yaml'
 
-def load_yaml(file)
-  raise "Can't open #{yamlfile}." if file.nil? || !File.exist?(file)
-  return YAML.load_file(file)
-end
-
-config = load_yaml('config.yml')
-bookname = config["bookname"] if bookname.nil?
+config = YAML.load_file('config.yml')
+bookname = config["bookname"]
+bookname = "example" if bookname.nil?
 
 desc 'create all books (.epub, .pdf, .mobi)'
 task all: [:epub, :pdf, :mobi]
