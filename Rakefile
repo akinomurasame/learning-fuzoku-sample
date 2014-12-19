@@ -1,9 +1,21 @@
 require 'rake'
 require 'yaml'
+require 'epub_validator'
 
 config = YAML.load_file('config.yml')
 bookname = config["bookname"]
 bookname = "example" if bookname.nil?
+epub_file = bookname+'.epub'
+mobi_file = bookname+'.mobi'
+
+def source_exist(source, error_message= nil)
+  return true if File.exist?(source)
+
+  puts error_message if error_message
+  fail "#{source} is not exist."
+  false
+end
+
 
 desc 'create all books (.epub, .pdf, .mobi)'
 task all: [:epub, :pdf, :mobi]
@@ -22,12 +34,28 @@ end
 desc 'create .mobi'
 task :mobi do
   sh 'rm -f *.mobi'
-  sh "kindlegen #{bookname}.epub || true"
+  sh "kindlegen #{epub_file} || true"
+end
+
+desc 'validation .epub'
+task :epub_validation do
+  next unless source_exist(epub_file, 'Cant execute :epub_validation')
+  epub = EpubValidator.check(epub_file)
+  puts "checking #{epub_file}..."
+
+  if epub.valid?
+    puts "OK, #{epub_file} is valid!"
+  else
+    epub.messages.each do |m|
+      puts m
+    end
+    fail "#{epub_file} is invalid :-("
+  end
 end
 
 desc 'send to kindle'
 task :send_to_kindle do
-  sh "bundle exec kindlemail -f #{bookname}.mobi"
+  sh "bundle exec kindlemail -f #{mobi_file}"
 end
 
 desc 'convert ./src/*.md to ./*.re'
