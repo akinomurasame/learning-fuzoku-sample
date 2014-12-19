@@ -13,7 +13,7 @@ def source_exist(source, error_message= nil)
   return true if File.exist?(source)
 
   puts error_message if error_message
-  fail "#{source} is not exist."
+  fail "#{source} does not exist."
   false
 end
 
