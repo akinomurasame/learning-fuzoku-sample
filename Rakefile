@@ -1,3 +1,4 @@
+require 'bundler/setup'
 require 'rake'
 require 'yaml'
 require 'epub_validator'
