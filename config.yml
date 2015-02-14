@@ -212,9 +212,6 @@ colophon: true
 # 奥付の日付文字列。
 # (※history配列を使うように変更することを勧告する。)
 # pubhistory: 奥付履歴文字列
-pubhistory: |
-  2014年11月1日 v1.0.0版発行
-# history を使うよう勧告されているが、実際に使用してみるとエラーになる
-# history: ["2014年11月1日 v1.0.0版発行"]
+history: [["2014-11-01"], ["2015-02-12"]]
 texstyle: samplemacro # なくても PDF は作成されるが、フォントなどがおかしくなる
 debug: true
