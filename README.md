@@ -1,7 +1,7 @@
 Fuzoku実践入門 環境サンプルファイル [![Circle CI](https://circleci.com/gh/akinomurasame/learning-fuzoku-sample.svg?style=svg)](https://circleci.com/gh/akinomurasame/learning-fuzoku-sample)
 ====================================
 
-[![Fuzoku実践入門](http://f.st-hatena.com/images/fotolife/l/learning-fuzoku/20141105/20141105234306.jpg)](http://www.amazon.co.jp/exec/obidos/ASIN/B00P4X25HO/)
+[![Fuzoku実践入門第2版](https://farm8.staticflickr.com/7396/16522013425_6ea333174a_o.png)](http://www.amazon.co.jp/exec/obidos/ASIN/B00P4X25HO/)
 
 このリポジトリは、Amazonで好評発売中の『[Fuzoku実践入門](http://www.amazon.co.jp/exec/obidos/ASIN/B00P4X25HO/)』の原稿執筆に実際使われた環境ファイルです。
 
