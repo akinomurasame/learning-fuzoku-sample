@@ -45,6 +45,10 @@ If you want to build EPUB, Execute this command
 Requirements
 ------------
 
+### Bundler for bundle command
+
+    $ gem install bundler
+    
 ### KindleGen for making .mobi
 
     $ brew tap homebrew/binary
